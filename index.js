@@ -4,7 +4,8 @@ const app = express();
 
 const port = 8000;
 
-app.get("/", (req, res) =>
+app.get("/*", (req, res) => {
+  console.log(new Date(Date.now()), ":", "HTTP/1.0", req.ip, "path:", req.path);
   res.json([
     {
       name: "Bob",
@@ -22,8 +23,8 @@ app.get("/", (req, res) =>
       name: "Maria",
       email: "maria@yahoo.com",
     },
-  ])
-);
+  ]);
+});
 
 app.listen(port, () => {
   console.log(`example app listening on port ${port}...`);
