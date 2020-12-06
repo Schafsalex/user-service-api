@@ -14,6 +14,14 @@ app.get("/", (req, res) =>
       name: "Ann",
       email: "ann@gmail.com",
     },
+    {
+      name: "Jake",
+      email: "k.jake@hotmail.com",
+    },
+    {
+      name: "Maria",
+      email: "maria@yahoo.com",
+    },
   ])
 );
 
