@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node:14.15.1-alpine
 WORKDIR /app
 ADD package*.json ./
 RUN npm install
 ADD . .
-CMD node index.js
+CMD node index.js   
